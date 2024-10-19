@@ -1,0 +1,32 @@
+<!-- Data Binding -->
+<!-- Interpolation -->
+<h2>Welcome to {{title}}</h2>
+<br>
+<!-- Property Binding -->
+<img [src]="imageSource" />
+<br>
+<!-- Event Binding -->
+<button (click)="onClick()">Click Me! <span style="font-style: italic;">notice logs</span></button>
+<br>
+<!-- Two way Binding -->
+<input [(ngModel)]="name" />
+<p>{{ name }}</p>
+<br>
+
+<!-- Directives *ngIf -->
+<button (click)="toggleVisibility()">Toggle Visibility</button>
+<p *ngIf="isVisible">This is conditionally visible!</p>
+
+
+<!-- Directives *ngFor -->
+<ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<!-- Directives ngSwitch -->
+
+<div [ngSwitch]="selectedOption">
+    <p *ngSwitchCase="'A'">Option A selected</p>
+    <p *ngSwitchCase="'B'">Option B selected</p>
+    <p *ngSwitchDefault>Default option</p>
+  </div>
