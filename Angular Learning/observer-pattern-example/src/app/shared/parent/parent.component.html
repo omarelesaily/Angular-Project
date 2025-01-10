@@ -1,0 +1,19 @@
+<div style="border: 2px solid black;">
+    <h2>Parent Component</h2>
+    <label>
+        Parent Input: 
+        <input type="text" [(ngModel)]="message" (input)="updateMessage()" />
+    </label>
+    <p>Message from Child: {{ message }}</p>
+
+    <form>
+        <label>Name: <input [(ngModel)]="personalInfo.name" name="name" (input)="updatePersonalInfo()"/></label><br />
+        <label>AKA: <input [(ngModel)]="personalInfo.aka" name="aka"  (input)="updatePersonalInfo()"/></label><br />
+        <label>Profession: <input [(ngModel)]="personalInfo.profession" name="profession"  (input)="updatePersonalInfo()"/></label><br />
+        <label>Age: <input [(ngModel)]="personalInfo.age" name="age" type="number"  (input)="updatePersonalInfo()"/></label><br />
+        <label>Height: <input [(ngModel)]="personalInfo.height" name="height" type="number"  (input)="updatePersonalInfo()"/></label><br />
+        <label>College: <input [(ngModel)]="personalInfo.college" name="college"  (input)="updatePersonalInfo()"/></label><br />
+        <label>National ID: <input [(ngModel)]="personalInfo.nationalID" name="nationalID"  (input)="updatePersonalInfo()"/></label><br />
+      </form>
+    <app-child></app-child>
+</div>
